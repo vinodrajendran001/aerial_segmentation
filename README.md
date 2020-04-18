@@ -90,7 +90,7 @@ Steps to run the aerial segmentation boiler plate notebook :
 5. Start the jupyter notebook from the notebook directory 
     ```
     (aerial)project_home_directory$ cd notebook
-    (aerial)project_home_directory$ jupyter notebook
+    (aerial)project_home_directory/notebook$ jupyter notebook
     ```
 6. Open the notebook ```aerial_segmentation.ipynb``` from the jupyter notebook and make sure the kernel is set to ```aerial```
 
