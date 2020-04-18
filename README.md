@@ -1,4 +1,4 @@
-aerial_segmentation_challenge
+aerial_segmentation
 ==============================
 
 Building segmentation model for aerial image
@@ -62,36 +62,37 @@ Project Organization
 
 --------
 
-Steps to run the Audi challenge boiler plate notebook  (```audi_it_ml_challenge.ipynb```):
+Steps to run the aerial segmentation boiler plate notebook :
 
 1. Create a virtual environment with the command
-     ```
-     conda create -n audi python=3.7
-     ```
+    ```
+    project_home_directory$ conda create -n aerial python=3.7
+    ```
 2. Activate the environment with the command
     ```
-    conda activate audi
+    (aerial)project_home_directory$ conda activate aerial
     ```
 3. Install the nb_conda_kernel to enable virtual env in the notebook
     ```
-    conda install nb_conda_kernels 
+    (aerial)project_home_directory$ conda install nb_conda_kernels 
     ```
 
 4. Install the required libraries
 
     for windows
     ```
-    pip install -r requirements.txt
+    (aerial)project_home_directory$ pip install -r requirements.txt
     ```
     for linux
     ```
-    pip install -r requirements_linux.txt
+    (aerial)project_home_directory$ pip install -r requirements_linux.txt
 
-5. Start the jupyter notebook from the project home directory 
+5. Start the jupyter notebook from the notebook directory 
     ```
-    jupyter notebook
+    (aerial)project_home_directory$ cd notebook
+    (aerial)project_home_directory$ jupyter notebook
     ```
-6. Open the notebook ```audi_it_ml_challenge.ipynb``` from the jupyter notebook and make sure the kernel is set to ```audi```
+6. Open the notebook ```aerial_segmentation.ipynb``` from the jupyter notebook and make sure the kernel is set to ```aerial```
 
 7. Use the ```config.json``` file in project home directory to define the data and training related parameters.
 
@@ -103,51 +104,51 @@ Steps to run the Audi challenge boiler plate notebook  (```audi_it_ml_challenge.
 
 --------
 
-Steps to run the Audi challenge boiler plate via terminal:
+Steps to run the aerial segmentation via terminal:
 
 1. Create a virtual environment with the command
-     ```
-     conda create -n audi python=3.7
-     ```
+    ```
+    project_home_directory$ conda create -n aerial python=3.7
+    ```
 2. Activate the environment with the command
     ```
-    conda activate audi
+    (aerial)project_home_directory$ conda activate aerial
     ```
 3. Install the nb_conda_kernel to enable virtual env in the notebook
     ```
-    conda install nb_conda_kernels 
+    (aerial)project_home_directory$ conda install nb_conda_kernels 
     ```
 
 4. Install the required libraries
 
     for windows
     ```
-    pip install -r requirements.txt
+    (aerial)project_home_directory$ pip install -r requirements.txt
     ```
     for linux
     ```
-    pip install -r requirements_linux.txt
+    (aerial)project_home_directory$ pip install -r requirements_linux.txt
     ```
 
 5. Use the ```config.json``` file in project home directory to define the data and training related parameters.
 
 6. To download and process the dataset
 ```
-    (audi)project_home_directory$: python src/data/make_dataset.py
+    (aerial)project_home_directory$: python src/data/make_dataset.py
 ```
 7. To prepare train and test set
 ```
-    (audi)project_home_directory$: python src/data/prepare_dataset.py
+    (aerial)project_home_directory$: python src/data/prepare_dataset.py
 ```
 8. To start the training
 ```
-    (audi)project_home_directory$: python src/models/train_model.py
+    (aerial)project_home_directory$: python src/models/train_model.py
 ```
 The trained model will get saved in ```project_home_directory/models/<datetimestamp>/trained_model_end.pth```
 
 9. To perform the evaluation on test set after training
 ```
-    (audi)project_home_directory$: python src/models/evaluate_model.py
+    (aerial)project_home_directory$: python src/models/evaluate_model.py
 ```
 
 The evaluation result will get saved in ```project_home_directory/reports/<datetimestamp>/eval_results.txt```
@@ -155,48 +156,47 @@ The evaluation result will get saved in ```project_home_directory/reports/<datet
 
 10. To do the prediction for new image
 ```
-    (audi)project_home_directory$: python src/models/predict_model.py <model checkpoint path> <image path> <outfile path>
+    (aerial)project_home_directory$: python src/models/predict_model.py <model checkpoint path> <image path> <outfile path>
 ```
 Example
 ```
-    (audi)project_home_directory$: python src/models/predict_model.py "models/20200415-152052/trained_model_end.pth" "data/raw/berlin/berlin5_image.png" "reports/figures/predict_berlin5_mask.png"
+    (aerial)project_home_directory$: python src/models/predict_model.py "models/20200415-152052/trained_model_end.pth" "data/raw/berlin/berlin5_image.png" "reports/figures/predict_berlin5_mask.png"
 ```
 
 -------
 
-Steps to run the Audi challenge boiler plate via streamlit webapp:
+Steps to run the aerial segmentation via streamlit webapp:
 
 1. Create a virtual environment with the command
-     ```
-     conda create -n audi python=3.7
-     ```
+    ```
+    project_home_directory$ conda create -n aerial python=3.7
+    ```
 2. Activate the environment with the command
     ```
-    conda activate audi
+    (aerial)project_home_directory$ conda activate aerial
     ```
 3. Install the nb_conda_kernel to enable virtual env in the notebook
     ```
-    conda install nb_conda_kernels 
+    (aerial)project_home_directory$ conda install nb_conda_kernels 
     ```
 
 4. Install the required libraries
 
     for windows
     ```
-    pip install -r requirements.txt
+    (aerial)project_home_directory$ pip install -r requirements.txt
     ```
     for linux
     ```
-    pip install -r requirements_linux.txt
+    (aerial)project_home_directory$ pip install -r requirements_linux.txt
     ```
-
 5. start the streamlit app
 
-```
-(audi)project_home_directory$: streamlit apps/app.py
-```
+    ```
+    (aerial)project_home_directory$: streamlit apps/app.py
+    ```
 
-**Please note streamlit app can also be launced via Audi challenge boiler plate notebook**
+**Please note streamlit app can also be launced via aerial_segmentation boiler plate notebook**
 
 
 <img src="streamlit_aerial_segmentation.gif" width="450" height="250" />
