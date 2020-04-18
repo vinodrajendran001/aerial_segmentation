@@ -1,0 +1,8 @@
+Logging... 
+
+Building IoU on test set =   tensor(0.6401)
+Road IoU on test set =   tensor(0.4409)
+BG IoU on test set =   tensor(0.6520)
+Mean IoU on test set =   tensor(0.5776)
+frequency weighted IoU on test set =   tensor(0.6413)
+Pixel accuracy on test set =   tensor(0.7691)

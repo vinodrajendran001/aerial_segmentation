@@ -1,0 +1,31 @@
+{
+    "data": {
+        "image_size_full": [
+            2208,
+            2208
+        ],
+        "split": 4,
+        "train_percentage": 80,
+        "image_resize": 300,
+        "overlay": false,
+        "city": [
+            "berlin"
+        ],
+        "url": [
+            "https://zenodo.org/record/1154821/files/berlin.zip"
+        ]
+    },
+    "model": {
+        "arch": "net_Unet"
+    },
+    "train": {
+        "mode": "train",
+        "batch_size": 5,
+        "shuffle": true,
+        "num_epochs": 10,
+        "num_workers": 5,
+        "learning_rate": 0.0001,
+        "learning_rate_decay": 4e-05,
+        "out_dir": ""
+    }
+}
